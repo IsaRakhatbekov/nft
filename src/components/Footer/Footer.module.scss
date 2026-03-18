@@ -1,0 +1,54 @@
+.Footer {
+	color: #fff;
+	padding: 65px 0;
+	background-color: #0d0919;
+
+	.container {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.logoWrapper {
+		display: inline-block;
+		width: 130px;
+		height: 130px;
+		margin-bottom: 10px;
+	}
+
+	.logoText {
+		font-family: var(--inter);
+		font-weight: 500;
+		font-size: 23px;
+		color: #fff;
+		max-width: 560px;
+	}
+
+	.list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 80px;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.titles {
+		font-family: var(--inter);
+		font-weight: 500;
+		font-size: 29px;
+		color: #fff;
+	}
+
+	.link {
+		font-family: var(--inter);
+		font-weight: 400;
+		font-size: 23px;
+		color: #fff;
+	}
+}
