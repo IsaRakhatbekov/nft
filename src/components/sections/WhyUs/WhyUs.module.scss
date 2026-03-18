@@ -1,0 +1,72 @@
+.WhyUs {
+	padding: 100px 0;
+	width: 90%;
+
+	fill: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10px);
+	border: 1px solid #ab2ffe;
+	border-left: none;
+	border-radius: 0 580px 580px 0;
+	background-color: #0d0919;
+
+	.content {
+		max-width: 500px;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		gap: 100px;
+	}
+
+	.title {
+		margin-bottom: 50px;
+	}
+
+	.text {
+		font-family: var(--poppins);
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+		color: #80ab9e;
+		margin-bottom: 30px;
+	}
+
+	.list {
+		display: grid;
+		gap: 25px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.item {
+		border-radius: 11px;
+		width: 241px;
+		height: 174px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+
+		backdrop-filter: blur(38.08030319213867px);
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.03) 0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+	}
+
+	/* shift only the second row (items 3-4) to the right */
+	.item:nth-child(n + 3) {
+		margin-left: clamp(0px, 4vw, 60px);
+	}
+
+	.innerTitle {
+		font-family: var(--inter);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 153%;
+		text-align: center;
+		color: #bdf3ff;
+	}
+}
