@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import Collections from '@/components/sections/Collections/Collections'
 import Creators from '@/components/sections/Creators/Creators'
 import Hero from '@/components/sections/Hero/Hero'
 
@@ -10,6 +11,7 @@ export default function Home() {
 			<main>
 				<Hero />
 				<Creators />
+				<Collections />
 			</main>
 			<Footer />
 		</div>
