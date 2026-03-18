@@ -1,0 +1,33 @@
+@use '@/styles/global.scss' as *;
+.header {
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 90;
+	backdrop-filter: blur(50px);
+	background: rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid #fff;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	.list {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+	}
+
+	.link {
+		font-family: var(--inter);
+		font-weight: 400;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+}

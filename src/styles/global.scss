@@ -1,0 +1,106 @@
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1230px;
+}
+
+:root {
+	--first-family: var(--inter);
+	--second-family: var(--poppins);
+	--third-family: var(--jura);
+}
+
+body {
+	font-family:
+		var(--inter) Roboto,
+		Arial,
+		sans-serif;
+	background-color: #160e2a;
+}
+
+.def-btn {
+	position: relative;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 0;
+	backdrop-filter: blur(10px);
+	background: rgba(0, 0, 0, 0.4);
+	transition: transform 200ms ease;
+
+	font-family: var(--poppins);
+	font-weight: 500;
+	font-size: 15px;
+	text-align: center;
+	color: #fffaf9;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		padding: 2px;
+		border-radius: inherit;
+		background: linear-gradient(90deg, #40c9ff 0%, #bc5eff 50%, #40c9ff 100%);
+		background-size: 200% 200%;
+		background-position: 0% 50%;
+		opacity: 0.9;
+		transition:
+			opacity 250ms ease,
+			filter 250ms ease;
+		-webkit-mask:
+			linear-gradient(#000 0 0) content-box,
+			linear-gradient(#000 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		pointer-events: none;
+	}
+
+	&:hover::before {
+		opacity: 1;
+		filter: drop-shadow(0 0 18px rgba(188, 94, 255, 0.45));
+		animation: def-btn-border-shift 1.6s ease-in-out infinite;
+	}
+}
+
+@keyframes def-btn-border-shift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.def-btn,
+	.def-btn::before {
+		transition: none;
+	}
+
+	.def-btn:hover::before {
+		animation: none;
+	}
+}
+
+.def-title {
+	position: relative;
+	font-family: var(--inter);
+	font-weight: 400;
+	font-size: 40px;
+	color: #fff;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: -35px;
+		bottom: -20px;
+		width: 85px;
+		height: 85px;
+		border-radius: 100%;
+		box-shadow: 0 14px 29px 0 #08013f;
+		background: linear-gradient(180deg, #6147f8 0%, #bc5eff 100%);
+		z-index: -1;
+	}
+}
