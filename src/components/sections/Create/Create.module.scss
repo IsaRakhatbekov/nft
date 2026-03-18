@@ -1,0 +1,49 @@
+.Create {
+	padding: 100px 0;
+
+	.title {
+		margin: 0 auto;
+		width: fit-content;
+		margin-bottom: 80px;
+	}
+
+	.list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.item {
+		width: 100%;
+		max-width: 205px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		color: #fff;
+	}
+
+	.iconWrapper {
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	.innerTitle {
+		font-family: var(--poppins);
+		font-weight: 500;
+		font-size: 20px;
+		text-align: center;
+		color: #fffaf9;
+	}
+
+	.text {
+		font-family: var(--inter);
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 160%;
+		color: #fff;
+	}
+}
